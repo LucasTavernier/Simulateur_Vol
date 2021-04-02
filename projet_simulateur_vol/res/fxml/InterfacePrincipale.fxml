@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="principal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controleurs.FxmlControleur">
+	<top>
+		<HBox prefHeight="35.0" prefWidth="600.0" spacing="5.0" BorderPane.alignment="CENTER">
+			<children>
+				<MenuButton mnemonicParsing="false" text="Fichier">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Nouveau" />
+						<MenuItem mnemonicParsing="false" text="Enregistrer" />
+						<MenuItem mnemonicParsing="false" onAction="#ouvrir" text="Ouvrir" />
+						<MenuItem mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+					</items>
+				</MenuButton>
+				<MenuButton mnemonicParsing="false" text="Exemples">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#afficherExemple01" text="Soleil + objet" />
+						<MenuItem mnemonicParsing="false" onAction="#afficherExemple02" text="Comète qui s'échappe de l'attraction du soleil" />
+						<MenuItem mnemonicParsing="false" onAction="#afficherExemple03" text="Comète qui tourne autour du soleil" />
+						<MenuItem mnemonicParsing="false" onAction="#afficherExemple04" text="Planète tourne autour du soleil" />
+						<MenuItem mnemonicParsing="false" onAction="#afficherExemple05" text="Accélération d'une sonde" />
+						<MenuItem mnemonicParsing="false" onAction="#afficherExemple06" text="Deux planètes autour du soleil" />
+						<MenuItem mnemonicParsing="false" onAction="#afficherExemple07" text="Deux planètes + vaisseau autour du soleil" />
+						<MenuItem mnemonicParsing="false" onAction="#afficherExemple08" text="Collisions entre 4 planètes" />
+					</items>
+				</MenuButton>
+				<MenuButton mnemonicParsing="false" text="Création">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Ajouter un objet fixe" />
+						<MenuItem mnemonicParsing="false" text="Ajouter un objet simulé" />
+						<MenuItem mnemonicParsing="false" text="Retirer objet" />
+					</items>
+				</MenuButton>
+            <ToggleButton fx:id="ButtonTraces" mnemonicParsing="false" onAction="#traces" selected="true" text="Traces" />
+			</children>
+			<BorderPane.margin>
+				<Insets />
+			</BorderPane.margin>
+			<padding>
+				<Insets left="2.0" top="2.0" />
+			</padding>
+		</HBox>
+	</top>
+	<right>
+		<VBox prefHeight="38.0" prefWidth="150.0" spacing="10.0" BorderPane.alignment="CENTER">
+			<children>
+				<Label text="Tableau de bord" textAlignment="CENTER" wrapText="true">
+					<VBox.margin>
+						<Insets />
+					</VBox.margin>
+				</Label>
+				<Accordion fx:id="dashboard" />
+			</children>
+			<BorderPane.margin>
+				<Insets right="5.0" />
+			</BorderPane.margin>
+		</VBox>
+	</right>
+	<center>
+		<Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="281.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+	</center>
+
+</BorderPane>

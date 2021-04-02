@@ -1,0 +1,8 @@
+Version de java : java version "1.8.0_221"
+
+java -jar "-Dfile.encoding=UTF-8" Simastro.jar exemples/Fichier.astro [1-4]
+
+1 : Euler explicite
+2 : Euler implicite
+3 : Leapfrog
+4 : RK4
